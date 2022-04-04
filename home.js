@@ -98,6 +98,6 @@ class Particle {
 
 function mousePressed(){
     if(mouseIsPressed == true){
-  window.open("indextwo.html", "_self");
+  window.open("play.html", "_self");
     } 
 }
