@@ -1,1 +1,12 @@
 *.png filter=lfs diff=lfs merge=lfs -text
+face1.png filter=lfs diff=lfs merge=lfs -text
+face2.png filter=lfs diff=lfs merge=lfs -text
+face3.png filter=lfs diff=lfs merge=lfs -text
+face4.png filter=lfs diff=lfs merge=lfs -text
+face5.png filter=lfs diff=lfs merge=lfs -text
+face6.png filter=lfs diff=lfs merge=lfs -text
+face7.png filter=lfs diff=lfs merge=lfs -text
+face8.png filter=lfs diff=lfs merge=lfs -text
+face9.png filter=lfs diff=lfs merge=lfs -text
+face10.png filter=lfs diff=lfs merge=lfs -text
+face11.png filter=lfs diff=lfs merge=lfs -text

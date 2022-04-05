@@ -1,1 +1,12 @@
 *.png filter=lfs diff=lfs merge=lfs -text
+torso1.png filter=lfs diff=lfs merge=lfs -text
+torso2.png filter=lfs diff=lfs merge=lfs -text
+torso3.png filter=lfs diff=lfs merge=lfs -text
+torso4.png filter=lfs diff=lfs merge=lfs -text
+torso5.png filter=lfs diff=lfs merge=lfs -text
+torso6.png filter=lfs diff=lfs merge=lfs -text
+torso7.png filter=lfs diff=lfs merge=lfs -text
+torso8.png filter=lfs diff=lfs merge=lfs -text
+torso9.png filter=lfs diff=lfs merge=lfs -text
+torso10.png filter=lfs diff=lfs merge=lfs -text
+torso11.png filter=lfs diff=lfs merge=lfs -text

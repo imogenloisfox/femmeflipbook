@@ -1,1 +1,9 @@
 *.png filter=lfs diff=lfs merge=lfs -text
+flogo.png filter=lfs diff=lfs merge=lfs -text
+arrow1.png filter=lfs diff=lfs merge=lfs -text
+bg.png filter=lfs diff=lfs merge=lfs -text
+dice.png filter=lfs diff=lfs merge=lfs -text
+femmef.png filter=lfs diff=lfs merge=lfs -text
+info.png filter=lfs diff=lfs merge=lfs -text
+lefta.png filter=lfs diff=lfs merge=lfs -text
+righta.png filter=lfs diff=lfs merge=lfs -text

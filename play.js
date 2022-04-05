@@ -22,6 +22,10 @@ var randomSize = 0;
 var randomHeight = 0;
 var randomWidth = 0;
 
+var homeSize = 0;
+var homeHeight = 0;
+var homeWidth = 0;
+
 var buttonRightWidth = 0;
 var buttonLeftWidth = 0;
 
@@ -37,6 +41,7 @@ let buttonImage;
 let buttonImage2;
 let infoButton;
 let randomButton;
+let homeButton;
 
 let bg;
 let bgHeight = 0;
@@ -51,6 +56,7 @@ function preload(){
   infoButton = loadImage('/button/arrow1.png');
   bg = loadImage('/button/bg.png');
   randomButton = loadImage('/button/dice.png');
+  homeButton = loadImage('/button/flogo.png');
  
 
   //head
@@ -162,12 +168,16 @@ function draw() {
   pop();
 
   infoSize = windowWidth/25;
-  infoWidth = windowWidth*0.5/15;
+  infoWidth = windowWidth*1.15/15;
   infoHeight = windowHeight*1/15;
 
   randomSize = windowWidth/25;
-  randomWidth = windowWidth*1.3/15;
+  randomWidth = windowWidth*1.9/15;
   randomHeight = windowHeight*1/15;
+
+  homeSize = windowWidth/25;
+  homeWidth = windowWidth*0.5/15;
+  homeHeight = windowHeight*1/15;
 
   imageSize = windowWidth/3;
   console.log("the image size is: ", imageSize);
@@ -192,6 +202,12 @@ function draw() {
  push();
  imageMode(CENTER);
  image(randomButton, randomWidth, randomHeight, randomSize, randomSize);
+ pop();
+
+ //home
+ push();
+ imageMode(CENTER);
+ image(homeButton, homeWidth, homeHeight, homeSize, homeSize);
  pop();
 
   //info
@@ -400,6 +416,16 @@ if(
 ){
   randomOrder();
 }
+
+//home
+if(
+    mouseX > homeWidth - homeSize/2 &&
+    mouseX < homeWidth + homeSize/2 &&
+    mouseY > homeHeight - homeSize/2 &&
+    mouseY < homeHeight + homeSize/2
+  ){
+    window.open("home.html", "_self");
+  }
 
  console.log(imageIndex);
 

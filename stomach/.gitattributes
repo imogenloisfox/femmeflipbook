@@ -1,1 +1,12 @@
 *.png filter=lfs diff=lfs merge=lfs -text
+tummy1.png filter=lfs diff=lfs merge=lfs -text
+tummy2.png filter=lfs diff=lfs merge=lfs -text
+tummy3.png filter=lfs diff=lfs merge=lfs -text
+tummy4.png filter=lfs diff=lfs merge=lfs -text
+tummy5.png filter=lfs diff=lfs merge=lfs -text
+tummy6.png filter=lfs diff=lfs merge=lfs -text
+tummy7.png filter=lfs diff=lfs merge=lfs -text
+tummy8.png filter=lfs diff=lfs merge=lfs -text
+tummy9.png filter=lfs diff=lfs merge=lfs -text
+tummy10.png filter=lfs diff=lfs merge=lfs -text
+tummy11.png filter=lfs diff=lfs merge=lfs -text
