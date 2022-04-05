@@ -13,15 +13,9 @@ let arrowSize = 0;
 let arrowWidth = 0;
 let arrowHeight = 0;
 
-let message;
-let mSize = 0;
-let mWidth = 0;
-let mHeight = 0;
-
 function preload() {
   img = loadImage("/button/femmef.png");  
   arrow = loadImage("/button/arrow1.png");
-  message = loadImage("/button/clickme.png");
 }
 
 function setup() {
@@ -35,10 +29,6 @@ function setup() {
   arrowSize = windowWidth/10;
   arrowWidth = windowWidth*4.5/15;
   arrowHeight = windowHeight*4.5/15;
-
-  mSize = windowWidth/35;
-  mWidth = arrowWidth;
-  mHeight = arrowHeight;
   
 }
 
@@ -137,9 +127,6 @@ if(
     mouseY > arrowHeight - arrowSize/2 &&
     mouseY < arrowHeight + arrowSize/2
   ){
-    //imageMode(CENTER);
-    //image(message, mWidth, mHeight, mSize, mSize);
-   // mSize = windowWidth/30;
     arrowSize = windowWidth/9;
 
     } else
