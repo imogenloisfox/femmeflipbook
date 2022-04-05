@@ -8,20 +8,39 @@ let canvas;
 
 let link;
 
+let arrow;
+let arrowSize = 0;
+let arrowWidth = 0;
+let arrowHeight = 0;
+
 function preload() {
   img = loadImage("/button/femmef.png");  
+  arrow = loadImage("/button/arrow1.png");
 }
 
 function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
  
     canvas.parent("p5Canvas");
+
   placeParticles();
   noStroke();
+
+  
 }
 
 function draw() {
   background(255);
+
+  arrowSize = windowWidth/10;
+  arrowWidth = windowWidth*4.5/15;
+  arrowHeight = windowHeight*4.5/15;
+
+push();
+ imageMode(CENTER);
+ image(arrow, arrowWidth, arrowHeight, arrowSize, arrowSize);
+ pop();
+
 
   mousePressed();
   
@@ -97,7 +116,29 @@ class Particle {
 }
 
 function mousePressed(){
-    if(mouseIsPressed == true){
-  window.open("play.html", "_self");
+//     if(mouseIsPressed == true){
+//   window.open("play.html", "_self");
+
+if(
+    mouseX > arrowWidth - arrowSize/2 &&
+    mouseX < arrowWidth + arrowSize/2 &&
+    mouseY > arrowHeight - arrowSize/2 &&
+    mouseY < arrowHeight + arrowSize/2
+  ){
+    cursor(HAND);
+
     } 
+
+if(mouseIsPressed == true &&
+    mouseX > arrowWidth - arrowSize/2 &&
+    mouseX < arrowWidth + arrowSize/2 &&
+    mouseY > arrowHeight - arrowSize/2 &&
+    mouseY < arrowHeight + arrowSize/2
+  ){
+    window.open("play.html", "_self");
+    
+    } 
+    
+        
+
 }
