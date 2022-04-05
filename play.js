@@ -63,7 +63,7 @@ function preload(){
   bg = loadImage('/button/bg.png');
   randomButton = loadImage('/button/dice.png');
   homeButton = loadImage('/button/flogo.png');
-  saveButton = loadImage('/button/save.png');
+  saveButton = loadImage('/button/saveButton.png');
  
 
   //head
