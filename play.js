@@ -331,7 +331,6 @@ function mousePressed(){
     }
   }
 
-
 //right stomach
 if(
   mouseX > buttonRightWidth - buttonSize/2 &&
@@ -453,7 +452,7 @@ if(
     mouseY > saveHeight - saveSize/2 &&
     mouseY < saveHeight + saveSize/2
   ){
-    saveCanvas('femmeflipbook', 'png');
+    saveCanvas('femmeFlipbook', 'png');
   } 
 
  console.log(imageIndex);
