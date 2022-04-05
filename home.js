@@ -13,9 +13,15 @@ let arrowSize = 0;
 let arrowWidth = 0;
 let arrowHeight = 0;
 
+let message;
+let mSize = 0;
+let mWidth = 0;
+let mHeight = 0;
+
 function preload() {
   img = loadImage("/button/femmef.png");  
   arrow = loadImage("/button/arrow1.png");
+  message = loadImage("/button/clickme.png");
 }
 
 function setup() {
@@ -25,20 +31,28 @@ function setup() {
 
   placeParticles();
   noStroke();
-  cursor(ARROW);
-}
-
-function draw() {
-  background(255);
 
   arrowSize = windowWidth/10;
   arrowWidth = windowWidth*4.5/15;
   arrowHeight = windowHeight*4.5/15;
 
+  mSize = windowWidth/35;
+  mWidth = arrowWidth;
+  mHeight = arrowHeight;
+  
+}
+
+function draw() {
+
+  background(255);
+  
+
   push();
   imageMode(CENTER);
   image(arrow, arrowWidth, arrowHeight, arrowSize, arrowSize);
   pop();
+
+  
 
   mousePressed();
   
@@ -116,16 +130,21 @@ function mousePressed(){
 //     if(mouseIsPressed == true){
 //   window.open("play.html", "_self");
 
+
 if(
     mouseX > arrowWidth - arrowSize/2 &&
     mouseX < arrowWidth + arrowSize/2 &&
     mouseY > arrowHeight - arrowSize/2 &&
     mouseY < arrowHeight + arrowSize/2
   ){
-    cursor(HAND);
+    //imageMode(CENTER);
+    //image(message, mWidth, mHeight, mSize, mSize);
+   // mSize = windowWidth/30;
+    arrowSize = windowWidth/9;
 
     } else
-    cursor(ARROW);
+    arrowSize = windowWidth/10;
+
 
 if(mouseIsPressed == true &&
     mouseX > arrowWidth - arrowSize/2 &&
@@ -136,7 +155,4 @@ if(mouseIsPressed == true &&
     window.open("play.html", "_self");
     
     } 
-    
-        
-
 }

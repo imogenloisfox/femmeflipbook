@@ -143,8 +143,25 @@ function setup() {
   image(img3[imageIndex3], 0, 0, 400, 400); 
   image(img4[imageIndex4], 0, 0, 400, 400);
   image(img5[imageIndex5], 0, 0, 400, 400); 
+
+  infoSize = windowWidth/25;
+  infoWidth = windowWidth*1.15/15;
+  infoHeight = windowHeight*1/15;
+
+  randomSize = windowWidth/25;
+  randomWidth = windowWidth*1.9/15;
+  randomHeight = windowHeight*1/15;
+
+  homeSize = windowWidth/25;
+  homeWidth = windowWidth*0.5/15;
+  homeHeight = windowHeight*1/15;
+
+  saveSize = windowWidth/25;
+  saveWidth = windowWidth*14.25/15;
+  saveHeight = windowHeight*13.75/15;
   
   randomOrder();
+
 }
 
 function randomOrder(){
@@ -174,21 +191,6 @@ function draw() {
   //bg.resize(bgWidth, bgHeight);
   pop();
 
-  infoSize = windowWidth/25;
-  infoWidth = windowWidth*1.15/15;
-  infoHeight = windowHeight*1/15;
-
-  randomSize = windowWidth/25;
-  randomWidth = windowWidth*1.9/15;
-  randomHeight = windowHeight*1/15;
-
-  homeSize = windowWidth/25;
-  homeWidth = windowWidth*0.5/15;
-  homeHeight = windowHeight*1/15;
-
-  saveSize = windowWidth/25;
-  saveWidth = windowWidth*14.25/15;
-  saveHeight = windowHeight*13.75/15;
 
   imageSize = windowWidth/3;
   console.log("the image size is: ", imageSize);
@@ -208,6 +210,7 @@ function draw() {
   buttonHeight2 = (windowHeight*0.5);
   buttonHeight3 = (windowHeight*0.5+100);
   buttonHeight4 = (windowHeight*0.5+200);
+
 
   //save
  push();
@@ -425,6 +428,7 @@ if(
   
 }
 
+
 //random
 if(
   mouseX > randomWidth - randomSize/2 &&
@@ -446,7 +450,7 @@ if(
   } 
 
   //save
-if(
+  if(
     mouseX > saveWidth - saveSize/2 &&
     mouseX < saveWidth + saveSize/2 &&
     mouseY > saveHeight - saveSize/2 &&
