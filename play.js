@@ -26,6 +26,10 @@ var homeSize = 0;
 var homeHeight = 0;
 var homeWidth = 0;
 
+var saveSize = 0;
+var saveHeight = 0;
+var saveWidth = 0;
+
 var buttonRightWidth = 0;
 var buttonLeftWidth = 0;
 
@@ -42,6 +46,8 @@ let buttonImage2;
 let infoButton;
 let randomButton;
 let homeButton;
+let saveButton;
+
 
 let bg;
 let bgHeight = 0;
@@ -57,6 +63,7 @@ function preload(){
   bg = loadImage('/button/bg.png');
   randomButton = loadImage('/button/dice.png');
   homeButton = loadImage('/button/flogo.png');
+  saveButton = loadImage('/button/save.png');
  
 
   //head
@@ -179,6 +186,10 @@ function draw() {
   homeWidth = windowWidth*0.5/15;
   homeHeight = windowHeight*1/15;
 
+  saveSize = windowWidth/25;
+  saveWidth = windowWidth*14.25/15;
+  saveHeight = windowHeight*13.75/15;
+
   imageSize = windowWidth/3;
   console.log("the image size is: ", imageSize);
 
@@ -197,6 +208,12 @@ function draw() {
   buttonHeight2 = (windowHeight*0.5);
   buttonHeight3 = (windowHeight*0.5+100);
   buttonHeight4 = (windowHeight*0.5+200);
+
+  //save
+ push();
+ imageMode(CENTER);
+ image(saveButton, saveWidth, saveHeight, saveSize, saveSize);
+ pop();
 
  //random
  push();
@@ -427,6 +444,16 @@ if(
     mouseY < homeHeight + homeSize/2
   ){
     window.open("home.html", "_self");
+  } 
+
+  //save
+if(
+    mouseX > saveWidth - saveSize/2 &&
+    mouseX < saveWidth + saveSize/2 &&
+    mouseY > saveHeight - saveSize/2 &&
+    mouseY < saveHeight + saveSize/2
+  ){
+    saveCanvas('femmeflipbook', 'png');
   } 
 
  console.log(imageIndex);

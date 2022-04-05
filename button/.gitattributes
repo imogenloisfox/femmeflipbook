@@ -7,3 +7,4 @@ femmef.png filter=lfs diff=lfs merge=lfs -text
 info.png filter=lfs diff=lfs merge=lfs -text
 lefta.png filter=lfs diff=lfs merge=lfs -text
 righta.png filter=lfs diff=lfs merge=lfs -text
+save.png filter=lfs diff=lfs merge=lfs -text

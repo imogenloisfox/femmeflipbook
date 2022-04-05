@@ -25,8 +25,7 @@ function setup() {
 
   placeParticles();
   noStroke();
-
-  
+  cursor(ARROW);
 }
 
 function draw() {
@@ -36,11 +35,10 @@ function draw() {
   arrowWidth = windowWidth*4.5/15;
   arrowHeight = windowHeight*4.5/15;
 
-push();
- imageMode(CENTER);
- image(arrow, arrowWidth, arrowHeight, arrowSize, arrowSize);
- pop();
-
+  push();
+  imageMode(CENTER);
+  image(arrow, arrowWidth, arrowHeight, arrowSize, arrowSize);
+  pop();
 
   mousePressed();
   
@@ -66,7 +64,6 @@ function placeParticles() {
       if(c[0] + c[1] + c[2] != 255 * 3) {
         particles.push(new Particle(i, j, c))
       }
-      
     }
   }
 }
@@ -127,7 +124,8 @@ if(
   ){
     cursor(HAND);
 
-    } 
+    } else
+    cursor(ARROW);
 
 if(mouseIsPressed == true &&
     mouseX > arrowWidth - arrowSize/2 &&
