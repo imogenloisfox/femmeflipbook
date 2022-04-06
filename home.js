@@ -114,9 +114,6 @@ class Particle {
 }
 
 function mousePressed(){
-//     if(mouseIsPressed == true){
-//   window.open("play.html", "_self");
-
 
 if(
     mouseX > arrowWidth - arrowSize/2 &&
