@@ -30,6 +30,10 @@ var saveSize = 0;
 var saveHeight = 0;
 var saveWidth = 0;
 
+var fSize = 0;
+var fHeight = 0;
+var fWidth = 0;
+
 var buttonRightWidth = 0;
 var buttonLeftWidth = 0;
 
@@ -47,6 +51,7 @@ let infoButton;
 let randomButton;
 let homeButton;
 let saveButton;
+let femme;
 
 
 let bg;
@@ -64,6 +69,7 @@ function preload(){
   randomButton = loadImage('/button/websiteRandom.png');
   homeButton = loadImage('/button/websiteHome.png');
   saveButton = loadImage('/button/websiteSave.png');
+  femme = loadImage('/button/femmeButton.png');
  
 
   //head
@@ -159,6 +165,10 @@ function setup() {
   saveSize = windowWidth/18;
   saveWidth = windowWidth*14.3/15;
   saveHeight = windowHeight*14.2/15;
+
+  fSize = windowWidth/18;
+  fWidth = windowWidth*14.4/15;
+  fHeight = windowHeight*0.75/15;
   
   randomOrder();
  mousePressed();
@@ -237,6 +247,12 @@ function draw() {
   push();
   imageMode(CENTER);
   image(infoButton, infoWidth, infoHeight, infoSize, infoSize);
+  pop();
+
+  //femme
+  push();
+  imageMode(CENTER);
+  image(femme, fWidth, fHeight, fSize, fSize);
   pop();
 
 
@@ -461,6 +477,16 @@ if(
     mouseY < saveHeight + saveSize/2
   ){
     saveCanvas('femmeFlipbook', 'png');
+  } 
+
+  //femme
+  if(
+    mouseX > fWidth - fSize/2 &&
+    mouseX < fWidth + fSize/2 &&
+    mouseY > fHeight - fSize/2 &&
+    mouseY < fHeight + fSize/2
+  ){
+    window.open("https://indd.adobe.com/view/765416a5-9c00-4a4e-8f42-f53221c3b346");
   } 
 
  console.log(imageIndex);
