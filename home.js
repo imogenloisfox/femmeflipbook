@@ -15,7 +15,7 @@ let arrowHeight = 0;
 
 function preload() {
   img = loadImage("/button/femmef.png");  
-  arrow = loadImage("/button/arrow1.png");
+  arrow = loadImage("/button/websiteEnter.png");
 }
 
 function setup() {
@@ -26,23 +26,20 @@ function setup() {
   placeParticles();
   noStroke();
 
-  arrowSize = windowWidth/10;
-  arrowWidth = windowWidth*4.5/15;
-  arrowHeight = windowHeight*4.5/15;
+  arrowSize = windowWidth/15;
+  arrowWidth = windowWidth*0.75/15;
+  arrowHeight = windowHeight*0.85/15;
   
 }
 
 function draw() {
 
   background(255);
-  
 
   push();
   imageMode(CENTER);
   image(arrow, arrowWidth, arrowHeight, arrowSize, arrowSize);
   pop();
-
-  
 
   mousePressed();
   
@@ -127,10 +124,10 @@ if(
     mouseY > arrowHeight - arrowSize/2 &&
     mouseY < arrowHeight + arrowSize/2
   ){
-    arrowSize = windowWidth/9;
+    arrowSize = windowWidth/15;
 
     } else
-    arrowSize = windowWidth/10;
+    arrowSize = windowWidth/16;
 
 
 if(mouseIsPressed == true &&

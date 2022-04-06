@@ -57,13 +57,13 @@ let bgSize = 0;
 
 function preload(){
 
-  buttonImage = loadImage('/button/righta.png');
-  buttonImage2 = loadImage('/button/lefta.png');
-  infoButton = loadImage('/button/arrow1.png');
+  buttonImage = loadImage('/button/buttonL.png');
+  buttonImage2 = loadImage('/button/buttonR.png');
+  infoButton = loadImage('/button/websiteInfo.png');
   bg = loadImage('/button/bg.png');
-  randomButton = loadImage('/button/dice.png');
-  homeButton = loadImage('/button/flogo.png');
-  saveButton = loadImage('/button/saveButton.png');
+  randomButton = loadImage('/button/websiteRandom.png');
+  homeButton = loadImage('/button/websiteHome.png');
+  saveButton = loadImage('/button/websiteSave.png');
  
 
   //head
@@ -144,23 +144,25 @@ function setup() {
   image(img4[imageIndex4], 0, 0, 400, 400);
   image(img5[imageIndex5], 0, 0, 400, 400); 
 
-  infoSize = windowWidth/25;
-  infoWidth = windowWidth*1.15/15;
-  infoHeight = windowHeight*1/15;
+  randomSize = windowWidth/18;
+  randomWidth = windowWidth*2.45/15;
+  randomHeight = windowHeight*0.75/15;
 
-  randomSize = windowWidth/25;
-  randomWidth = windowWidth*1.9/15;
-  randomHeight = windowHeight*1/15;
+  infoSize = windowWidth/18;
+  infoWidth = windowWidth*1.55/15;
+  infoHeight = windowHeight*0.75/15;
 
-  homeSize = windowWidth/25;
-  homeWidth = windowWidth*0.5/15;
-  homeHeight = windowHeight*1/15;
+  homeSize = windowWidth/18;
+  homeWidth = windowWidth*0.65/15;
+  homeHeight = windowHeight*0.75/15;
 
-  saveSize = windowWidth/25;
-  saveWidth = windowWidth*14.25/15;
-  saveHeight = windowHeight*13.75/15;
+  saveSize = windowWidth/18;
+  saveWidth = windowWidth*14.3/15;
+  saveHeight = windowHeight*14.2/15;
   
   randomOrder();
+  mousePressed();
+  
 
 }
 
@@ -177,7 +179,8 @@ function windowResize(){
 }
 
 function draw() {
-  
+
+   
  background(255);
 
   bgHeight = windowHeight;
@@ -273,7 +276,7 @@ function draw() {
 function infoMessage() {
   window.alert('𝓌𝑒𝓁𝒸𝑜𝓂𝑒 𝓉𝑜 𝐹𝑒𝓂𝓂𝑒 𝐹𝓁𝒾𝓅𝒷𝑜𝑜𝓀');
   window.alert('𝔻𝕖𝕤𝕚𝕘𝕟𝕖𝕕 𝕒𝕟𝕕 𝕕𝕖𝕧𝕖𝕝𝕠𝕡𝕖𝕕 𝕓𝕪 𝐼𝓂𝑜𝑔𝑒𝓃 𝐹𝑜𝓍, 𝕥𝕙𝕚𝕤 𝕞𝕚𝕔𝕣𝕠-𝕨𝕖𝕓𝕤𝕚𝕥𝕖 𝕒𝕚𝕞𝕤 𝕥𝕠 𝕖𝕩𝕡𝕝𝕠𝕣𝕖 𝕥𝕙𝕖 𝕡𝕠𝕤𝕤𝕚𝕓𝕚𝕝𝕚𝕥𝕚𝕖𝕤 𝕠𝕗 𝕡𝕠𝕤𝕥-𝕙𝕦𝕞𝕒𝕟 𝕓𝕖𝕒𝕦𝕥𝕪 𝕤𝕥𝕒𝕟𝕕𝕒𝕣𝕕𝕤, 𝕚𝕟𝕥𝕖𝕟𝕕𝕚𝕟𝕘 𝕥𝕠 𝕔𝕙𝕒𝕝𝕝𝕖𝕟𝕘𝕖 𝕥𝕙𝕖 𝕖𝕡𝕚𝕥𝕠𝕞𝕖 𝕠𝕗 𝕗𝕖𝕞𝕞𝕖 𝕣𝕖𝕡𝕣𝕖𝕤𝕖𝕟𝕥𝕒𝕥𝕚𝕠𝕟.');
-  window.alert('𝕌𝕤𝕚𝕟𝕘 𝕥𝕙𝕖 𝕒𝕣𝕣𝕠𝕨𝕤, 𝕘𝕖𝕟𝕖𝕣𝕒𝕥𝕖 𝕪𝕠𝕦𝕣 𝕡𝕣𝕖𝕗𝕖𝕣𝕣𝕖𝕕 𝕕𝕚𝕘𝕚𝕥𝕒𝕝 𝕚𝕕𝕖𝕟𝕥𝕚𝕥𝕪 𝕓𝕪 𝕔𝕙𝕠𝕠𝕤𝕚𝕟𝕘 𝕖𝕒𝕔𝕙 𝕒𝕧𝕒𝕥𝕒𝕣 𝕤𝕖𝕘𝕞𝕖𝕟𝕥. 𝔸𝕝𝕥𝕖𝕣𝕟𝕒𝕥𝕚𝕧𝕖𝕝𝕪, 𝕦𝕤𝕖 𝕥𝕙𝕖 𝕕𝕚𝕔𝕖 𝕓𝕦𝕥𝕥𝕠𝕟 𝕥𝕠 𝕣𝕒𝕟𝕕𝕠𝕞𝕚𝕤𝕖 𝕪𝕠𝕦𝕣 𝕒𝕧𝕒𝕥𝕒𝕣. ℂ𝕝𝕚𝕔𝕜 𝕥𝕙𝕖 𝕤𝕒𝕧𝕖 𝕓𝕦𝕥𝕥𝕠𝕟 𝕠𝕟𝕔𝕖 𝕪𝕠𝕦’𝕧𝕖 𝕗𝕚𝕟𝕚𝕤𝕙𝕖𝕕!')
+  window.alert('𝕌𝕤𝕚𝕟𝕘 𝕥𝕙𝕖 𝕒𝕣𝕣𝕠𝕨𝕤, 𝕘𝕖𝕟𝕖𝕣𝕒𝕥𝕖 𝕪𝕠𝕦𝕣 𝕡𝕣𝕖𝕗𝕖𝕣𝕣𝕖𝕕 𝕕𝕚𝕘𝕚𝕥𝕒𝕝 𝕚𝕕𝕖𝕟𝕥𝕚𝕥𝕪 𝕓𝕪 𝕔𝕙𝕠𝕠𝕤𝕚𝕟𝕘 𝕖𝕒𝕔𝕙 𝕒𝕧𝕒𝕥𝕒𝕣 𝕤𝕖𝕘𝕞𝕖𝕟𝕥. 𝔸𝕝𝕥𝕖𝕣𝕟𝕒𝕥𝕚𝕧𝕖𝕝𝕪, 𝕦𝕤𝕖 𝕥𝕙𝕖 𝕣𝕒𝕟𝕕𝕠𝕞 𝕓𝕦𝕥𝕥𝕠𝕟 𝕥𝕠 𝕣𝕒𝕟𝕕𝕠𝕞𝕚𝕤𝕖 𝕪𝕠𝕦𝕣 𝕒𝕧𝕒𝕥𝕒𝕣. ℂ𝕝𝕚𝕔𝕜 𝕥𝕙𝕖 𝕤𝕒𝕧𝕖 𝕓𝕦𝕥𝕥𝕠𝕟 𝕠𝕟𝕔𝕖 𝕪𝕠𝕦’𝕧𝕖 𝕗𝕚𝕟𝕚𝕤𝕙𝕖𝕕!')
 }
 
 
@@ -291,6 +294,7 @@ function mousePressed(){
     }else{
       imageIndex = 0;
     } 
+
   }
   // left head
   if(
@@ -462,5 +466,4 @@ if(
  console.log(imageIndex);
 
 }
-
 
