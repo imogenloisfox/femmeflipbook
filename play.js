@@ -161,7 +161,7 @@ function setup() {
   saveHeight = windowHeight*14.2/15;
   
   randomOrder();
-  mousePressed();
+ mousePressed();
   
 
 }
@@ -386,7 +386,7 @@ if(
   mouseY > buttonHeight3 - buttonSize/2 &&
   mouseY < buttonHeight3 + buttonSize/2
 ){
-if(imageIndex3>0){
+if(imageIndex4>0){
 imageIndex4 --;
 }else{
 imageIndex4 = img4.length-1;;
@@ -414,7 +414,7 @@ if(
   mouseY > buttonHeight4 - buttonSize/2 &&
   mouseY < buttonHeight4 + buttonSize/2
 ){
-if(imageIndex4>0){
+if(imageIndex5>0){
 imageIndex5 --;
 }else{
 imageIndex5 = img5.length-1;;
