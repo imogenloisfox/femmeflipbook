@@ -57,7 +57,7 @@ let bgSize = 0;
 
 function preload(){
 
-  buttonImage = loadImage('/button/buttonL.png');
+  buttonImage = loadImage('/button/buttonLeft.png');
   buttonImage2 = loadImage('/button/buttonR.png');
   infoButton = loadImage('/button/websiteInfo.png');
   bg = loadImage('/button/bg.png');
