@@ -6,4 +6,3 @@ websiteHome.png filter=lfs diff=lfs merge=lfs -text
 websiteSave.png filter=lfs diff=lfs merge=lfs -text
 websiteRandom.png filter=lfs diff=lfs merge=lfs -text
 buttonR.png filter=lfs diff=lfs merge=lfs -text
-buttonLeft.png filter=lfs diff=lfs merge=lfs -text
