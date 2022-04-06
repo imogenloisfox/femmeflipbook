@@ -1,0 +1,9 @@
+bg.png filter=lfs diff=lfs merge=lfs -text
+femmef.png filter=lfs diff=lfs merge=lfs -text
+websiteInfo.png filter=lfs diff=lfs merge=lfs -text
+buttonL.png filter=lfs diff=lfs merge=lfs -text
+buttonR.png filter=lfs diff=lfs merge=lfs -text
+websiteEnter.png filter=lfs diff=lfs merge=lfs -text
+websiteRandom.png filter=lfs diff=lfs merge=lfs -text
+websiteHome.png filter=lfs diff=lfs merge=lfs -text
+websiteSave.png filter=lfs diff=lfs merge=lfs -text
